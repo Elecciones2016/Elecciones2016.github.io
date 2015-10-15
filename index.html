@@ -22,24 +22,30 @@
 <p>A continuación explicaremos como funciona (o funcionará) el el proyecto de información libre sobre la (élite) política en Chile. Si aún no tienes claro de qué se trata, echa un vistazo al sitio de <a href="https://www.opencongress.org/">opencongress</a> para que te hagas una idea. Básicamente, pretendemos utilizar la información que es entregada de forma libre, gracias a la <a href="https://www.portaltransparencia.cl/PortalPdT/ley-de-transparencia">ley de transparencia</a> y entregar esta información de forma amigable para el usuario, de cara a las próximas elecciones en Chile. Nuestra idea es que antes de votar, la gente sepa el comportamiento de los <em>honorables</em>, su asistencia, sus sueldos, sus viajes, sus votos y participaciones en comisiones y más.</p>
 
 <p>Para esto, el proyecto se ha estructurado en distintas aplicaciones, basado en el diseño estructural que se ha pensado.
-<img alt=""></p>
+<img src="https://cloud.githubusercontent.com/assets/5105812/10514784/4671d66e-7326-11e5-84d4-8f83acbadf10.png" alt="Diagrama general del proyecto"></p>
 
 <p>Según el diagrama anterior, existen (por ahora) los siguientes subproyectos.</p>
 
 <h2>
 <a id="1-la-base-de-datos" class="anchor" href="#1-la-base-de-datos" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. La base de datos</h2>
 
-<h2>
-<a id="1-la-api" class="anchor" href="#1-la-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. La API</h2>
+<p>La base de datos esta en <a href="https://www.mongodb.org/">MongoDB</a>, y para poblarla, se hará scraping sobre distintos sitios web que son la fuente de información (<a href="http://www.senado.cl/">senado</a>, <a href="https://www.camara.cl/">camara de diputados</a>, <a href="http://www.servel.cl/ss/site/home.html">servel</a>, etc). Para el scraping, se utilizará un script en node js. Puedes revisar y contribuir al proyecto en <a href="https://github.com/Elecciones2016/Db-build">este repositorio</a></p>
 
 <h2>
-<a id="1-la-aplicación-web" class="anchor" href="#1-la-aplicaci%C3%B3n-web" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. La aplicación web</h2>
+<a id="2-la-api" class="anchor" href="#2-la-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. La API</h2>
+
+<p>La API consiste en una API RESTful construida usando Express, que consume los datos desde la base de datos, mediante Mongoose como ODM. Puedes revisar y contribuir al proyecto en <a href="https://github.com/Elecciones2016/API">este repositorio</a></p>
 
 <h2>
-<a id="1-la-aplicación-móvil" class="anchor" href="#1-la-aplicaci%C3%B3n-m%C3%B3vil" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. La aplicación móvil</h2>
+<a id="3-la-aplicación-web" class="anchor" href="#3-la-aplicaci%C3%B3n-web" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. La aplicación web</h2>
+
+<p>La aplicación web es una de las tres formas que contempla el proyecto para mostrar la información. Para esto se utiliza angular.js, mediante la herramienta <a href="https://github.com/yeoman/generator-angular">Yeoman</a> para facilitar y agilizar el desarrollo. Esta aplicación, asi como la aplicación móvil y la aplicación de escritorio, consume los datos previamente publicados en la API. Puedes revisar y contribuir al proyecto en <a href="https://github.com/Elecciones2016/app">este repositorio</a></p>
 
 <h2>
-<a id="1-la-aplicación-de-escritorio" class="anchor" href="#1-la-aplicaci%C3%B3n-de-escritorio" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. La aplicación de escritorio</h2>
+<a id="4-la-aplicación-móvil" class="anchor" href="#4-la-aplicaci%C3%B3n-m%C3%B3vil" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. La aplicación móvil</h2>
+
+<h2>
+<a id="5-la-aplicación-de-escritorio" class="anchor" href="#5-la-aplicaci%C3%B3n-de-escritorio" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. La aplicación de escritorio</h2>
 
       <footer class="site-footer">
 
